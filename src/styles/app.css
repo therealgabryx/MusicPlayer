@@ -5,4 +5,8 @@
           box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
 }
+
+h1, h2, h3 {
+  color: #363636;
+}
 /*# sourceMappingURL=app.css.map */

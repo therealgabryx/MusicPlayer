@@ -14,4 +14,18 @@ div.Song {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
+div.Song img {
+  min-width: 20%;
+  max-width: 50%;
+  border-radius: 50%;
+}
+
+div.Song h2 {
+  padding: 3rem 1rem 1rem 1rem;
+}
+
+div.Song h3 {
+  font-size: 1rem;
+}
 /*# sourceMappingURL=index.css.map */

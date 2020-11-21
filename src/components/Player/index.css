@@ -32,7 +32,7 @@ div.Player .time-control p {
 }
 
 div.Player .play-control {
-  min-width: 50%;
+  min-width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
