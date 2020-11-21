@@ -1,0 +1,26 @@
+div.Library {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20rem;
+    height: 100%;
+    overflow: scroll;
+    background: white;
+    box-shadow: 2px 2px 50px rgb(204, 204, 204);
+
+    h2 {
+        padding: 2rem;
+    }
+
+    div.library-songs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: scroll;
+        padding: 1rem 0rem;
+    } 
+
+    .selected {
+        background: rgba(180, 180, 180, 0.8);
+    } 
+} 
