@@ -6,12 +6,12 @@ div.Player {
     justify-content: space-between; 
 
     .time-control { 
-        min-width: 50%;
+        min-width: 85%;
         display: flex;
 
-        input {
+        input { 
             width: 100%;
-            padding: 1rem 2rem;
+            padding: 1rem 0rem;
         } 
         
         p {
@@ -24,7 +24,7 @@ div.Player {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1rem;
+        padding: 1rem 1rem;
 
         svg {
             cursor: pointer;

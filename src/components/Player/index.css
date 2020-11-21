@@ -16,7 +16,7 @@ div.Player {
 }
 
 div.Player .time-control {
-  min-width: 50%;
+  min-width: 85%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,7 +24,7 @@ div.Player .time-control {
 
 div.Player .time-control input {
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 1rem 0rem;
 }
 
 div.Player .time-control p {
@@ -42,7 +42,7 @@ div.Player .play-control {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1rem;
+  padding: 1rem 1rem;
 }
 
 div.Player .play-control svg {
