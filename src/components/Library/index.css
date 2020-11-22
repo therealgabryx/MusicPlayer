@@ -8,10 +8,26 @@ div.Library {
   background: white;
   -webkit-box-shadow: 2px 2px 50px #cccccc;
           box-shadow: 2px 2px 50px #cccccc;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  opacity: 0.8;
 }
 
-div.Library h2 {
+div.Library div.head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding: 2rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+div.Library div.head a {
+  display: inline-block;
+  padding-right: 1.5rem;
 }
 
 div.Library div.library-songs {
@@ -26,10 +42,16 @@ div.Library div.library-songs {
       -ms-flex-align: center;
           align-items: center;
   overflow: scroll;
-  padding: 1rem 0rem;
+  padding-bottom: 2rem;
 }
 
 div.Library .selected {
   background: rgba(180, 180, 180, 0.8);
+}
+
+div.active-library {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
 }
 /*# sourceMappingURL=index.css.map */

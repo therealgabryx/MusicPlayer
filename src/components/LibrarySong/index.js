@@ -1,9 +1,10 @@
 import React from 'react'
 import './index.css'
 
-export default function LibrarySong({ songs, setSongs, song, setCurrentSong, audioRef, isPlaying }) {
+export default function LibrarySong({ songs, setSongs, song, setCurrentSong, audioRef, isPlaying, libraryStatus, setLibraryStatus }) {
     const songSelectHandler = () => { 
         setCurrentSong(song);
+        setLibraryStatus(!libraryStatus);
         // add active state 
         const newSongs = songs.map(savedSong => {
             if(savedSong.id === song.id) {

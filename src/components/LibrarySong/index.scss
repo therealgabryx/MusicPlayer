@@ -3,11 +3,12 @@ div.LibrarySong {
     padding: 1rem 2rem;
     display: flex;
     align-items: center;
-    cursor: pointer;
+    cursor: pointer; 
 
-    img {
+    img { 
         width: 30%;
     } 
+
     &:hover { 
         background: rgb(222, 222, 222); 
     } 
