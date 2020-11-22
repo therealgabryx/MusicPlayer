@@ -14,6 +14,7 @@ div.LibrarySong {
 div.LibrarySong img {
   display: inline-block;
   width: 4rem;
+  border-radius: 25%;
 }
 
 div.LibrarySong:hover {

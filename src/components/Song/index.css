@@ -30,6 +30,7 @@ div.Song div.cover {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   position: relative;
+  margin-bottom: 0.5rem;
 }
 
 div.Song div.cover img {

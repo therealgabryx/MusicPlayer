@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './index.css'
 
 // utils
@@ -72,7 +72,11 @@ export default function Player({ songs, setSongs, audioRef, currentSong, setCurr
 
     const trackAnim = {
         transform: `translateX(${songInfo.animationPercentage}%)` 
-    }
+    } 
+
+    // state
+    const [isSkipForwardClicked, setIsSkipForwardClicked] = useState(false);
+    const [isSkipBackwardsClicked, setIsSkipBackwardsClicked] = useState(false);
 
     return (
         <div className='Player'>
@@ -85,16 +89,16 @@ export default function Player({ songs, setSongs, audioRef, currentSong, setCurr
             <p>{ songInfo.duration ? getTime(songInfo.duration) : '0:00' }</p>
             </div> 
             <div className="play-control"> 
-                <a onClick={() => skipTrackHandler('skip-back')}>
+                <a onClick={() => skipTrackHandler('skip-back')} onTouchStart={() => { setIsSkipBackwardsClicked(!isSkipBackwardsClicked) }} onTouchEnd={() => { setIsSkipBackwardsClicked(!isSkipBackwardsClicked) }} style={{ color:`${ isSkipBackwardsClicked ? 'darkgray' : 'black' }` }} >
                     <FontAwesomeIcon className='skip-back' size='2x' icon={faAngleDoubleLeft}/>
                 </a>
                 <a onClick={playSongHandler}>
                     <FontAwesomeIcon className='play' size='2x' icon={ isPlaying ? faPause : faPlay }/>
                 </a>
-                <a onClick={() => skipTrackHandler('skip-forward')}>
-                    <FontAwesomeIcon className='skip-forward' size='2x' icon={faAngleDoubleRight}/>
-                </a>
+                <a onClick={() => skipTrackHandler('skip-forward')} onTouchStart={() => { setIsSkipForwardClicked(!isSkipForwardClicked) }} onTouchEnd={() => { setIsSkipForwardClicked(!isSkipForwardClicked) }} style={{ color:`${ isSkipForwardClicked ? 'darkgray' : 'black' }` }}>
+                    <FontAwesomeIcon className='skip-forward' size='2x' icon={faAngleDoubleRight}/> 
+                </a> 
             </div> 
-        </div>
-    )
-}
+        </div> 
+    ) 
+} 
