@@ -1,6 +1,9 @@
 import React from 'react'
 import './index.css'
 
+// utils
+import { playAudio } from '../../util'
+
 export default function LibrarySong({ songs, setSongs, song, setCurrentSong, audioRef, isPlaying, libraryStatus, setLibraryStatus }) {
     const songSelectHandler = () => { 
         setCurrentSong(song);
@@ -23,14 +26,7 @@ export default function LibrarySong({ songs, setSongs, song, setCurrentSong, aud
         setSongs(newSongs); 
 
         // check if the song is playing 
-        if (isPlaying) {
-            const playPromise = audioRef.current.play(); 
-            if (playPromise !== undefined) {
-                playPromise.then((audio) => {
-                    audioRef.current.play(); 
-                })
-            }
-        } 
+        playAudio(isPlaying, audioRef);
     } 
     
     return (
