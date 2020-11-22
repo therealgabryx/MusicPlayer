@@ -3,6 +3,7 @@ div.Player {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-bottom: 3rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;

@@ -56,4 +56,5 @@ div.active-library {
 
 div.active-back {
     transform: translateX(0);
+    touch-action: none;
 }
