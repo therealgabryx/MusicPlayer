@@ -2,12 +2,12 @@ div.HomeView {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  touch-action: pan-y;
   -ms-touch-action: pan-y;
-      touch-action: pan-y;
 }
 
 div.disabled-scroll {
+  touch-action: none;
   -ms-touch-action: none;
-      touch-action: none;
 }
 /*# sourceMappingURL=index.css.map */

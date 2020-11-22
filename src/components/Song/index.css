@@ -15,10 +15,107 @@ div.Song {
           justify-content: center;
 }
 
-div.Song img {
-  min-width: 20%;
-  max-width: 50%;
+div.Song div.cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1.5rem;
+  width: 80%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+div.Song div.cover img {
+  display: inline-block;
+  width: 10rem;
   border-radius: 50%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  touch-action: none;
+  -ms-touch-action: none;
+}
+
+div.Song div.cover div.inner-circle {
+  touch-action: none;
+  -ms-touch-action: none;
+  background: transparent;
+  position: absolute;
+  padding: 5rem;
+  border-radius: 50%;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+div.Song div.cover div.outer-circle {
+  touch-action: none;
+  -ms-touch-action: none;
+  background: transparent;
+  position: absolute;
+  padding: 5rem;
+  border-radius: 50%;
+  opacity: 0.5;
+  z-index: -2;
+}
+
+div.Song div.cover div.breathe-inner {
+  -webkit-animation: breathe-inner 2s ease-in-out infinite alternate 0.8s;
+          animation: breathe-inner 2s ease-in-out infinite alternate 0.8s;
+}
+
+div.Song div.cover div.breathe-outer {
+  -webkit-animation: breathe-outer 2s ease-in-out infinite alternate;
+          animation: breathe-outer 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes breathe-inner {
+  0% {
+    padding: 5rem;
+  }
+  100% {
+    padding: 6.8rem;
+  }
+}
+
+@keyframes breathe-inner {
+  0% {
+    padding: 5rem;
+  }
+  100% {
+    padding: 6.8rem;
+  }
+}
+
+@-webkit-keyframes breathe-outer {
+  0% {
+    padding: 5rem;
+  }
+  100% {
+    padding: 7.4rem;
+  }
+}
+
+@keyframes breathe-outer {
+  0% {
+    padding: 5rem;
+  }
+  100% {
+    padding: 7.4rem;
+  }
+}
+
+div.Song div.cover-active {
+  padding: 0;
+}
+
+div.Song div.cover-active img {
+  width: 11.5rem;
 }
 
 div.Song h2 {

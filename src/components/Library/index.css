@@ -74,7 +74,7 @@ div.active-library {
 div.active-back {
   -webkit-transform: translateX(0);
           transform: translateX(0);
+  touch-action: none;
   -ms-touch-action: none;
-      touch-action: none;
 }
 /*# sourceMappingURL=index.css.map */

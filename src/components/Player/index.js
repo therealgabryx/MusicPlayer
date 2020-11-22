@@ -38,12 +38,6 @@ export default function Player({ songs, setSongs, audioRef, currentSong, setCurr
         } 
     } 
 
-    const timeUpdateHandler = (e) => { 
-        const currentTime = e.target.currentTime;
-        const duration = e.target.duration; 
-        setSongInfo({ ...songInfo, currentTime, duration })
-    } 
-
     const getTime = (time) => {
         return(
             // quickly format time in minutes and seconds format 

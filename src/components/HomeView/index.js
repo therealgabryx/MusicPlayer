@@ -10,7 +10,7 @@ export default function HomeView({ libraryStatus, setLibraryStatus, currentSong,
     return (
         <div className='HomeView'>
             <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus}/>
-            <Song currentSong={currentSong}/>
+            <Song currentSong={currentSong} isPlaying={isPlaying}/>
             <Player songs={songs} setSongs={setSongs} audioRef={audioRef} currentSong={currentSong} setCurrentSong={setCurrentSong} isPlaying={isPlaying} setIsPlaying={setIsPlaying} songInfo={songInfo} setSongInfo={setSongInfo}/>
         </div> 
     )

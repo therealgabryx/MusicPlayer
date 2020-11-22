@@ -1,15 +1,88 @@
-div.Song {
+div.Song { 
     min-height: 60vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    img {
-        min-width: 20%;
-        max-width: 50%;
-        border-radius: 50%;
-    }     
+    div.cover { 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+        width: 80%;
+        transition: all 0.5s ease; 
+        position: relative;
+
+        img {
+            display: inline-block;
+            width: 10rem;
+            border-radius: 50%;
+            transition: all 0.5s ease;
+            touch-action: none;
+            -ms-touch-action: none;
+        }     
+
+        div.inner-circle { 
+            touch-action: none;
+            -ms-touch-action: none;
+            background: transparent;
+            position: absolute;
+            //padding: 6.4rem;
+            padding: 5rem;
+            border-radius: 50%;
+            opacity: 0.5;
+            z-index: -1;
+        } 
+
+        div.outer-circle { 
+            touch-action: none;
+            -ms-touch-action: none;
+            background: transparent;
+            position: absolute;
+            //padding: 7.4rem;
+            padding: 5rem;
+            border-radius: 50%;
+            opacity: 0.5;
+            z-index: -2; 
+        } 
+
+        div.breathe-inner { 
+            animation: breathe-inner 2s ease-in-out infinite alternate 0.8s;
+        } 
+
+        div.breathe-outer { 
+            animation: breathe-outer 2s ease-in-out infinite alternate;
+        } 
+
+        @keyframes breathe-inner { 
+            0% { 
+                padding: 5rem;
+            } 
+
+            100% { 
+                padding: 6.8rem;
+            } 
+        } 
+
+        @keyframes breathe-outer { 
+            0% { 
+                padding: 5rem;
+            } 
+            
+            100% { 
+                padding: 7.4rem;
+            } 
+        } 
+    }  
+
+    div.cover-active { 
+        padding: 0;
+
+        img {
+            width: 11.5rem;
+        }
+    } 
 
     h2 {
         padding: 3rem 1rem 1rem 1rem; 

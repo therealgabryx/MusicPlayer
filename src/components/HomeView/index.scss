@@ -3,8 +3,10 @@ div.HomeView {
     height: 100%;
     overflow: hidden;
     touch-action: pan-y;
+    -ms-touch-action: pan-y;
 } 
 
 div.disabled-scroll {
     touch-action: none;
+    -ms-touch-action: none;
 }
