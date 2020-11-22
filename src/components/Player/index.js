@@ -91,9 +91,15 @@ export default function Player({ songs, setSongs, audioRef, currentSong, setCurr
             <p>{ songInfo.duration ? getTime(songInfo.duration) : '0:00' }</p>
             </div> 
             <div className="play-control"> 
-                <FontAwesomeIcon onClick={() => skipTrackHandler('skip-back')} className='skip-back' size='2x' icon={faAngleDoubleLeft}/>
-                <FontAwesomeIcon onClick={playSongHandler} className='play' size='2x' icon={ isPlaying ? faPause : faPlay }/>
-                <FontAwesomeIcon onClick={() => skipTrackHandler('skip-forward')} className='skip-forward' size='2x' icon={faAngleDoubleRight}/>
+                <a onClick={() => skipTrackHandler('skip-back')}>
+                    <FontAwesomeIcon className='skip-back' size='2x' icon={faAngleDoubleLeft}/>
+                </a>
+                <a onClick={playSongHandler}>
+                    <FontAwesomeIcon className='play' size='2x' icon={ isPlaying ? faPause : faPlay }/>
+                </a>
+                <a onClick={() => skipTrackHandler('skip-forward')}>
+                    <FontAwesomeIcon className='skip-forward' size='2x' icon={faAngleDoubleRight}/>
+                </a>
             </div> 
         </div>
     )

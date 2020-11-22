@@ -5,6 +5,11 @@
           box-sizing: border-box;
   scrollbar-width: thin;
   scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 *::-webkit-scrollbar {
@@ -23,6 +28,11 @@
 
 body {
   font-family: 'Lato', sans-serif;
+  height: 100vh;
+}
+
+img, svg {
+  pointer-events: none;
 }
 
 h1, h2, h3 {
