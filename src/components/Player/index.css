@@ -25,6 +25,43 @@ div.Player .time-control {
 div.Player .time-control input {
   width: 100%;
   padding: 1rem 0rem;
+  -webkit-appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+div.Player .time-control input[type="range"]:focus {
+  outline: none;
+}
+
+div.Player .time-control input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: none;
+  background: #cccccc;
+}
+
+div.Player .time-control div.track {
+  background: lightblue;
+  width: 100%;
+  height: 1rem;
+  margin: 1.1rem 0rem;
+  position: relative;
+  border-radius: 1.1rem;
+  overflow: hidden;
+}
+
+div.Player .time-control div.animate-track {
+  background: #cccccc;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  pointer-events: none;
 }
 
 div.Player .time-control p {
