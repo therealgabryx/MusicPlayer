@@ -16,7 +16,7 @@ export default function Library({ songs, setSongs, setCurrentSong, audioRef, isP
         }
         setTimeout(() => {
             setLibraryStatus(!libraryStatus);
-        }, 50);
+        }, 50); 
     }
 
     return (

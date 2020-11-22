@@ -31,6 +31,128 @@ div.About div.head a {
   padding-right: 1.5rem;
 }
 
+div.About div.content {
+  min-height: 85vh;
+  margin: 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+div.About div.content div.developedby {
+  margin: 0 0 1rem 0;
+}
+
+div.About div.content div.developedby p:last-of-type {
+  padding: 0.5rem 0;
+}
+
+div.About div.content div.contact {
+  margin: 0 0 1rem 0;
+}
+
+div.About div.content div.contact div.icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 8rem;
+  padding: 0.5rem 0;
+}
+
+div.About div.content div.contact div.icons a {
+  color: inherit;
+}
+
+div.About div.content div.contact div.icons * {
+  font-size: 1.8rem;
+}
+
+div.About div.content div.tech {
+  position: relative;
+  padding: 0 0 0 2.1rem;
+  margin: 0 0 1rem 0;
+}
+
+div.About div.content div.tech div#title {
+  position: absolute;
+  left: -3rem;
+  top: 4rem;
+  letter-spacing: 0.25rem;
+  -webkit-transform: rotateZ(-90deg);
+          transform: rotateZ(-90deg);
+}
+
+div.About div.content div.tech div.stack-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 5rem;
+  padding: 0 0 0.2rem 0;
+}
+
+div.About div.content div.tech div.stack-head img {
+  width: 2rem;
+}
+
+div.About div.content div.tech div.stack div.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 12rem;
+  margin: 0 0.3rem;
+}
+
+div.About div.content div.tech div.stack div.row * {
+  font-size: 1.8rem;
+}
+
+div.About div.content div.tech div.stack div.row:last-of-type {
+  width: 5rem;
+  padding: 0.8rem 0;
+}
+
+div.About div.content div.music {
+  margin: 0 0 1rem 0;
+}
+
+div.About div.content div.issue {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 0.8rem;
+  padding-bottom: 2rem;
+}
+
+div.About div.content div.issue a {
+  display: inline-block;
+  padding: 0 0.5rem;
+  color: inherit;
+}
+
 div.active-about {
   -webkit-transform: translateX(0);
           transform: translateX(0);
