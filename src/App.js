@@ -9,6 +9,7 @@ import data from './appdata/data'
 // Components 
 import HomeView from './components/HomeView'
 import Library from './components/Library'
+import About from './components/About'
 
 function App() {  
   // state
@@ -21,6 +22,7 @@ function App() {
     animationPercentage: 0
   }); 
   const [libraryStatus, setLibraryStatus] = useState(false);
+  const [aboutStatus, setAboutStatus] = useState(false);
 
   // refs
   const audioRef = useRef(null);
@@ -44,9 +46,10 @@ function App() {
   return ( 
     <div className="App">
       <HomeView libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} songs={songs} setSongs={setSongs} audioRef={audioRef} currentSong={currentSong} setCurrentSong={setCurrentSong} isPlaying={isPlaying} setIsPlaying={setIsPlaying} songInfo={songInfo} setSongInfo={setSongInfo}/>
-      <Library audioRef={audioRef} songs={songs} setSongs={setSongs} setCurrentSong={setCurrentSong} isPlaying={isPlaying} libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus}/> 
+      <Library audioRef={audioRef} songs={songs} setSongs={setSongs} setCurrentSong={setCurrentSong} isPlaying={isPlaying} libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} aboutStatus={aboutStatus} setAboutStatus={setAboutStatus}/> 
+      <About aboutStatus={aboutStatus} setAboutStatus={setAboutStatus}/>
       <audio onEnded={songEndHandler} onTimeUpdate={timeUpdateHandler} onLoadedMetadata={timeUpdateHandler} ref={audioRef} src={currentSong.audio}></audio>
-    </div>
+    </div> 
   ); 
 } 
 
