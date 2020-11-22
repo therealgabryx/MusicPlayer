@@ -4,14 +4,16 @@ div.LibrarySong {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
   cursor: pointer;
 }
 
 div.LibrarySong img {
-  width: 30%;
+  display: inline-block;
+  width: 4rem;
 }
 
 div.LibrarySong:hover {
@@ -19,7 +21,19 @@ div.LibrarySong:hover {
 }
 
 div.LibrarySong div.song-description {
-  padding-left: 1rem;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 4rem;
+  width: 100%;
 }
 
 div.LibrarySong div.song-description h3 {

@@ -13,6 +13,7 @@ div.Library {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   opacity: 0.8;
+  z-index: 2;
 }
 
 div.Library div.head {
@@ -49,9 +50,29 @@ div.Library .selected {
   background: rgba(180, 180, 180, 0.8);
 }
 
+div.Library-back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: 1;
+  background: transparent;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-animation: all 1s ease;
+          animation: all 1s ease;
+}
+
 div.active-library {
   -webkit-transform: translateX(0);
           transform: translateX(0);
   opacity: 1;
+}
+
+div.active-back {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 /*# sourceMappingURL=index.css.map */

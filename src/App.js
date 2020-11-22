@@ -7,6 +7,7 @@ import './styles/app.css'
 import data from './appdata/data'
 
 // Components 
+import HomeView from './components/HomeView'
 import Player from './components/Player'
 import Song from './components/Song'
 import Library from './components/Library'
@@ -45,9 +46,7 @@ function App() {
 
   return ( 
     <div className="App">
-      <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus}/> 
-      <Song currentSong={currentSong}/> 
-      <Player songs={songs} setSongs={setSongs} audioRef={audioRef} currentSong={currentSong} setCurrentSong={setCurrentSong} isPlaying={isPlaying} setIsPlaying={setIsPlaying} songInfo={songInfo} setSongInfo={setSongInfo}/>
+      <HomeView libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} currentSong={currentSong} songs={songs} setSongs={setSongs} audioRef={audioRef} currentSong={currentSong} setCurrentSong={setCurrentSong} isPlaying={isPlaying} setIsPlaying={setIsPlaying} songInfo={songInfo} setSongInfo={setSongInfo}/>
       <Library audioRef={audioRef} songs={songs} setSongs={setSongs} setCurrentSong={setCurrentSong} isPlaying={isPlaying} libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus}/> 
       <audio onEnded={songEndHandler} onTimeUpdate={timeUpdateHandler} onLoadedMetadata={timeUpdateHandler} ref={audioRef} src={currentSong.audio}></audio>
     </div>

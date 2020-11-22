@@ -2,11 +2,13 @@ div.LibrarySong {
     margin: 0.5rem 0;
     padding: 1rem 2rem;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    width: 100%;
     cursor: pointer; 
 
     img { 
-        width: 30%;
+        display: inline-block;
+        width: 4rem;
     } 
 
     &:hover { 
@@ -14,7 +16,12 @@ div.LibrarySong {
     } 
 
     div.song-description {
-        padding-left: 1rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 4rem;
+        width: 100%;
         
         h3 {
             font-size: 1rem;
