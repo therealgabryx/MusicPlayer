@@ -30,7 +30,8 @@
 html {
     touch-action: none;
     touch-action: pan-y;
-}
+    -webkit-tap-highlight-color: rgba(204, 204, 204, 1);
+} 
 
 body {
     font-family: 'Lato', sans-serif;

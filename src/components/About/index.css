@@ -16,6 +16,14 @@ div.About {
   z-index: 3;
 }
 
+div.About p {
+  font-size: 0.8rem;
+}
+
+div.About p strong {
+  font-size: 1rem;
+}
+
 div.About div.head {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -66,7 +74,7 @@ div.About div.content div.contact div.icons {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 8rem;
-  padding: 0.5rem 0;
+  padding: 0.6rem 0;
 }
 
 div.About div.content div.contact div.icons a {
@@ -75,6 +83,29 @@ div.About div.content div.contact div.icons a {
 
 div.About div.content div.contact div.icons * {
   font-size: 1.8rem;
+  margin-left: 0.05rem;
+}
+
+div.About div.content div.contact div.lines {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 8rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 0.05rem;
+}
+
+div.About div.content div.contact div.lines div {
+  height: 3.5px;
+  width: 1.6rem;
+  background-color: #cccccc;
+  border-radius: 50%;
 }
 
 div.About div.content div.tech {

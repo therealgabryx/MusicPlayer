@@ -42,6 +42,7 @@ div.LibrarySong div.song-description h3 {
 }
 
 div.LibrarySong div.song-description h4 {
+  padding-top: 0.3rem;
   font-size: 0.7rem;
 }
 /*# sourceMappingURL=index.css.map */

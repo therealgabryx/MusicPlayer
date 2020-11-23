@@ -37,6 +37,7 @@ export default function About({ aboutStatus, setAboutStatus }) {
                                 <FontAwesomeIcon size='1x' icon={faInstagram} alt="Instagram"/> 
                             </a>
                         </div>
+                        <div className="lines"><div/><div/><div/></div>
                     </div> 
                     <div className="tech"> 
                         <div id="title">tech stack</div>
@@ -59,7 +60,7 @@ export default function About({ aboutStatus, setAboutStatus }) {
                     </div>
                     <div className="music">
                         <p>music from</p>
-                        <img src={ChillhopPng} alt="Chillhop Music" style={{ width:'8rem', display:'inline-block', padding:'0.5rem 0' }}/>
+                        <img src={ChillhopPng} alt="Chillhop Music" style={{ width:'8rem', display:'inline-block', padding:'0.6rem 0' }}/>
                     </div> 
                     <div className="issue">
                         <p>found an issue?</p> 
