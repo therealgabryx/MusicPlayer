@@ -1,26 +1,26 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef } from "react";
 
 // import global styles
-import './styles/app.css' 
+import "./styles/app.css";
 
 // import songs data
-import data from './appdata/data'
+import data from "./appdata/data";
 
-// Components 
-import HomeView from './components/HomeView'
-import Library from './components/Library'
-import About from './components/About'
+// Components
+import HomeView from "./components/HomeView";
+import Library from "./components/Library";
+import About from "./components/About";
 
-function App() {  
+function App() {
   // state
-  const [songs, setSongs] = useState(data()); 
-  const [currentSong, setCurrentSong] = useState(songs[0]); 
+  const [songs, setSongs] = useState(data());
+  const [currentSong, setCurrentSong] = useState(songs[0]);
   const [isPlaying, setIsPlaying] = useState(false);
   const [songInfo, setSongInfo] = useState({
     currentTime: 0,
     duration: 0,
-    animationPercentage: 0
-  }); 
+    animationPercentage: 0,
+  });
   const [libraryStatus, setLibraryStatus] = useState(false);
   const [aboutStatus, setAboutStatus] = useState(false);
 
@@ -30,27 +30,55 @@ function App() {
   const timeUpdateHandler = (e) => {
     const currentTime = e.target.currentTime;
     const duration = e.target.duration;
-    // calculate percentage 
+    // calculate percentage
     const roundedCurrent = Math.round(currentTime);
     const roundedDuration = Math.round(duration);
-    const animationPercentage = ((roundedCurrent / roundedDuration) * 100); 
-    setSongInfo({ ...songInfo, currentTime, duration, animationPercentage }); 
-  } 
+    const animationPercentage = (roundedCurrent / roundedDuration) * 100;
+    setSongInfo({ ...songInfo, currentTime, duration, animationPercentage });
+  };
 
   const songEndHandler = async () => {
     let currentIndex = songs.findIndex((song) => song.id === currentSong.id);
     await setCurrentSong(songs[(currentIndex + 1) % songs.length]);
     if (isPlaying) audioRef.current.play();
-  } 
+  };
 
-  return ( 
+  return (
     <div className="App">
-      <HomeView libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} songs={songs} setSongs={setSongs} audioRef={audioRef} currentSong={currentSong} setCurrentSong={setCurrentSong} isPlaying={isPlaying} setIsPlaying={setIsPlaying} songInfo={songInfo} setSongInfo={setSongInfo}/>
-      <Library audioRef={audioRef} songs={songs} setSongs={setSongs} setCurrentSong={setCurrentSong} isPlaying={isPlaying} libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} aboutStatus={aboutStatus} setAboutStatus={setAboutStatus}/> 
-      <About aboutStatus={aboutStatus} setAboutStatus={setAboutStatus}/>
-      <audio onEnded={songEndHandler} onTimeUpdate={timeUpdateHandler} onLoadedMetadata={timeUpdateHandler} ref={audioRef} src={currentSong.audio}></audio>
-    </div> 
-  ); 
-} 
+      <HomeView
+        libraryStatus={libraryStatus}
+        setLibraryStatus={setLibraryStatus}
+        songs={songs}
+        setSongs={setSongs}
+        audioRef={audioRef}
+        currentSong={currentSong}
+        setCurrentSong={setCurrentSong}
+        isPlaying={isPlaying}
+        setIsPlaying={setIsPlaying}
+        songInfo={songInfo}
+        setSongInfo={setSongInfo}
+      />
+      <Library
+        audioRef={audioRef}
+        songs={songs}
+        setSongs={setSongs}
+        setCurrentSong={setCurrentSong}
+        isPlaying={isPlaying}
+        libraryStatus={libraryStatus}
+        setLibraryStatus={setLibraryStatus}
+        aboutStatus={aboutStatus}
+        setAboutStatus={setAboutStatus}
+      />
+      <About aboutStatus={aboutStatus} setAboutStatus={setAboutStatus} />
+      <audio
+        onEnded={songEndHandler}
+        onTimeUpdate={timeUpdateHandler}
+        onLoadedMetadata={timeUpdateHandler}
+        ref={audioRef}
+        src={currentSong.audio}
+      ></audio>
+    </div>
+  );
+}
 
 export default App;

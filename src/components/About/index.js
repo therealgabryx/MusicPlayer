@@ -41,11 +41,15 @@ export default function About({ aboutStatus, setAboutStatus }) {
                     </div> 
                     <div className="tech"> 
                         <div id="title">tech stack</div>
-                        <div className="stack-head">
+                        {/* <div className="stack-head">
                             <img src={ReactSvg} alt="React"/>
                             <img src={FirebaseSvg} alt="Firebase"/>
-                        </div>
+                        </div>  */}
                         <div className="stack">
+                            <div className="row stack-head">
+                                <img src={ReactSvg} alt="React"/>
+                                <img src={FirebaseSvg} alt="Firebase"/>
+                            </div>
                             <div className="row">
                                 <FontAwesomeIcon size='1x' icon={faHtml5} alt="Html5"/>
                                 <FontAwesomeIcon size='1x' icon={faCss3Alt} alt="Css3"/>

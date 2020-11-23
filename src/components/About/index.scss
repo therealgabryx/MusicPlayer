@@ -7,7 +7,7 @@ div.About {
   background: white;  
   overflow: scroll;
   box-shadow: 2px 2px 50px rgb(204, 204, 204);
-  transform: translateX(-100%);
+  transform: translateX(-120%);
   transition: all 0.5s ease;
   opacity: 0.8;
   z-index: 3;
@@ -86,26 +86,16 @@ div.About {
       position: relative;
       padding: 0 0 0 2.1rem;
       margin: 0 0 1rem 0;
+      min-height: 4rem;
+      // background: lightblue;
 
       div#title {
         position: absolute;
         left: -3rem;
-        top: 4rem;
+        top: 40%;
         letter-spacing: 0.25rem;
         transform: rotateZ(-90deg); 
       }
-
-      div.stack-head {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 5rem;
-        padding: 0 0 0.2rem 0;
-
-        img {
-          width: 2rem;
-        }
-      } 
 
       div.stack {  
 
@@ -114,6 +104,7 @@ div.About {
           justify-content: space-between;
           width: 12rem;
           margin: 0 0.3rem;
+          padding-top: 0.8rem;
 
           * {
             font-size: 1.8rem;
@@ -122,8 +113,22 @@ div.About {
 
         div.row:last-of-type {
           width: 5rem;
-          padding: 0.8rem 0;
+        } 
+
+        div.row:nth-of-type(2) {
+          padding-top: 1rem;
         }
+
+        div.row:first-of-type {
+          width: 5rem; 
+          padding: 0;
+          margin-left: 0;
+          height: 2rem;
+
+          img {
+            width: 2rem;
+          }
+        } 
       } 
     }
 

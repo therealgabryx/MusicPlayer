@@ -31,12 +31,13 @@ html {
       touch-action: none;
   -ms-touch-action: pan-y;
       touch-action: pan-y;
-  -webkit-tap-highlight-color: #cccccc;
+  -webkit-tap-highlight-color: #ffffff;
 }
 
 body {
   font-family: 'Lato', sans-serif;
   height: 100vh;
+  -webkit-tap-highlight-color: white;
 }
 
 img, svg {

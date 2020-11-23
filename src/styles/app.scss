@@ -30,12 +30,13 @@
 html {
     touch-action: none;
     touch-action: pan-y;
-    -webkit-tap-highlight-color: rgba(204, 204, 204, 1);
+    -webkit-tap-highlight-color: #ffffff;
 } 
 
 body {
     font-family: 'Lato', sans-serif;
     height: 100vh;
+    -webkit-tap-highlight-color: white;
 }
 
 img, svg {
